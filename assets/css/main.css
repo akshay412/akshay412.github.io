@@ -93,6 +93,9 @@ input, select, textarea {
 	html {
 		box-sizing: border-box;
 	}
+	html {
+		scroll-behavior: smooth;
+	}
 
 	*, *:before, *:after {
 		box-sizing: inherit;
@@ -101,9 +104,12 @@ input, select, textarea {
 	body {
 		background-color: #2e3141;
 		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-		background-size: auto, cover;
-		background-attachment: fixed, fixed;
-		background-position: center, center;
+		background-size: auto,
+ cover;
+		background-attachment: fixed,
+ fixed;
+		background-position: center,
+ center;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2659,6 +2665,8 @@ input, select, textarea {
 	ul.contact {
 		list-style: none;
 		padding: 0;
+		/* margin-left: 20px; */
+		/* display: flex; */
 	}
 
 		ul.contact li {
@@ -2870,14 +2878,14 @@ input, select, textarea {
 		font-family: Raleway, Helvetica, sans-serif;
 		font-size: 0.8em;
 		font-weight: 700;
-		height: 3.75em;
-		letter-spacing: 0.1em;
-		line-height: 3.75em;
-		padding: 0 2.25em;
+		height: 4em; /* Increased height */
+		line-height: 4em; /* Adjusted to match height */
+		padding: 0 2.5em; /* Adjusted padding */
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
+		min-width: 150px; /* Added minimum width */
 	}
 
 		input[type="submit"]:hover,
@@ -2984,6 +2992,57 @@ input, select, textarea {
 				padding: 0;
 			}
 
+		}
+		nav {
+			text-align: center; /* Center the buttons in the nav */
+			padding: 20px; /* Padding around the nav */
+			margin-top: 40px; /* Moves the buttons lower */
+		}
+		
+		nav a.button {
+			display: inline-flex; /* Use flexbox to center content */
+			justify-content: center; /* Center align text horizontally */
+			align-items: center; /* Center align text vertically */
+			padding: 15px 30px; /* Increase padding */
+			height: 50px; /* Fixed height for clickable area */
+			min-width: 100px; /* Set a minimum width */
+			text-align: center; /* Center align text */
+			font-family: Raleway, Helvetica, sans-serif; /* Consistent font */
+			font-size: 0.8em; /* Font size */
+			font-weight: 700; /* Bold text */
+			text-decoration: none; /* Remove underline */
+			color: #ffffff; /* Text color */
+			background-color: transparent; /* Background color */
+			border-radius: 5px; /* Rounded corners */
+			margin: 5px; /* Space between buttons */
+			transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+		}
+		
+		nav a.button:hover {
+			background-color: rgba(255, 255, 255, 0.2); /* Optional hover effect */
+		}
+
+
+
+		
+		.profile-pic {
+			margin-left: 90px;
+			width: 150px; /* Increased width */
+			height: 150px; /* Increased height */
+			border-radius: 50%; /* Makes the image round */
+			overflow: hidden; /* Hides overflow */
+			margin-bottom: 10px; /* Space between image and details */
+		}
+		
+		.profile-pic img {
+			width: 100%; /* Makes the image fill the frame */
+			height: 100%; /* Ensures the image covers the height of the frame */
+			object-fit: cover; /* Ensures the image maintains its aspect ratio and covers the area */
+			display: block; /* Prevents extra space below the image */
+		}
+		
+		.details {
+			margin-top: 10px; /* Space between image and details */
 		}
 
 /* Features */
@@ -3464,8 +3523,10 @@ input, select, textarea {
 				padding: 7em 0 8.25em 0 ;
 				background-color: #2e3141;
 				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-				background-size: auto, cover;
-				background-position: center, center;
+				background-size: auto,
+ cover;
+				background-position: center,
+ center;
 				margin-bottom: -6.5em;
 			}
 
@@ -3574,8 +3635,10 @@ input, select, textarea {
 			padding: 9em 0 6.25em 0 ;
 			background-color: #2e3141;
 			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-			background-size: auto, cover;
-			background-position: center, 0% 30%;
+			background-size: auto,
+ cover;
+			background-position: center,
+ 0% 30%;
 			margin-bottom: -6.5em;
 		}
 
@@ -3585,8 +3648,10 @@ input, select, textarea {
 
 		#wrapper > header {
 			padding: 11em 3em 7.375em 3em ;
-			background-size: auto, cover;
-			background-position: center, 0% 0%;
+			background-size: auto,
+ cover;
+			background-position: center,
+ 0% 0%;
 			margin-bottom: -4.75em;
 		}
 
@@ -3600,7 +3665,8 @@ input, select, textarea {
 
 		#wrapper > header {
 			padding: 6.5em 2em 3em 2em ;
-			background-size: auto, 125%;
+			background-size: auto,
+ 125%;
 			margin-bottom: -2.5em;
 		}
 
@@ -4062,8 +4128,10 @@ input, select, textarea {
 		#footer {
 			background-color: #2e3141;
 			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-			background-size: auto, cover;
-			background-position: center, center;
+			background-size: auto,
+ cover;
+			background-position: center,
+ center;
 			margin-top: -6.5em;
 			padding-top: 6.5em;
 		}

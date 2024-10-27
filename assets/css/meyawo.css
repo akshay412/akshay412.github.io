@@ -2727,24 +2727,37 @@ textarea.form-control {
 
 .btn {
   display: inline-block;
-  font-weight: 600; /* Increased from 400 for better visibility */
+  font-weight: 600; /* Increased for better visibility */
   color: #212529;
   text-align: center;
   vertical-align: middle;
-  margin-left: -100px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   background-color: transparent;
   border: 2px solid transparent; /* Increased border width */
-  padding: 0.5rem 1rem; /* Increased padding */
-  font-size: 1.2rem; /* Increased font size */
+  
+  /* Increase padding for a larger button */
+  padding: 0.75rem 1.5rem; /* Adjusted for larger button size */
+  
+  /* Increase font size */
+  font-size: 1.5rem; /* Increased font size */
+  
   line-height: 1.5;
   border-radius: 0.25rem; /* Slightly increased for better proportion */
+  
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+/* Center alignment styles */
+.header-content {
+  text-align: center;
+}
+
+.header-content a {
+  display: inline-block;
+  margin-top: 20px; /* Adjust as needed for spacing */
+}
+
+
 
 @media (prefers-reduced-motion: reduce) {
   .btn {
@@ -12089,34 +12102,35 @@ pre .code {
 }
 
 .header .header-content .header-title .up {
-  font-size: calc(30px + (60 - 30) * ((100vw - 300px) / (1300 - 300)));
+  font-size: calc(24px + (45 - 24) * ((100vw - 300px) / (992 - 300)));
   font-weight: 500;
   color: #444;
   margin-bottom: 5px;
   position: relative;
   display: block;
-  /* margin-left: -100px; */
+  margin-left: 0;
+  text-align: left;
 }
 
 .header .header-content .header-title .down {
-  font-size: calc(30px + (75 - 30) * ((100vw - 300px) / (1300 - 300)));
+  font-size: calc(28px + (60 - 28) * ((100vw - 300px) / (992 - 300)));
   margin-bottom: 0;
   position: relative;
   display: block;
-  white-space: nowrap; /* Add this line */
-  text-overflow: ellipsis; /* Add this line */
+  text-overflow: ellipsis;
   text-align: left;
-  margin-left: -100px;
+  margin-left: 0;
+  white-space: normal;
 }
 
 .header .header-content .header-subtitle {
-  font-size: calc(10px + (22 - 10) * ((100vw - 300px) / (1300 - 300)));
-  letter-spacing: calc(1px + (7 - 1) * ((100vw - 300px) / (1300 - 300)));
+  font-size: calc(8px + (16 - 8) * ((100vw - 300px) / (992 - 300))); /* Adjusted font size */
+  letter-spacing: calc(0.5px + (3 - 0.5) * ((100vw - 300px) / (992 - 300))); /* Reduced letter spacing */
   opacity: .8;
-  margin-top: -10px;
-  margin-bottom: 20px;
-  white-space: nowrap;
-  margin-left: -100px;
+  margin-top: -5px; /* Keep this or adjust as needed */
+  margin-bottom: 15px; /* Reduced bottom margin */
+  white-space: normal; /* Allow wrapping */
+  margin-left: 0; /* Reset margin-left */
 }
 
 .header .header-content .btn {
@@ -12165,7 +12179,84 @@ pre .code {
   .header-content {
     padding-left: calc(100% / 5) !important;
   }
+  .header .header-content .header-title .down {
+    white-space: normal; /* Allow wrapping on smaller screens */
+    margin-left: 0; /* Reset the negative margin */
+    font-size: calc(24px + (45 - 24) * ((100vw - 300px) / (992 - 300))); /* Adjust font size for smaller screens */
+  }
 }
+
+/* Media query for larger screens */
+@media (min-width: 992px) {
+  .header .header-content .header-title .down {
+    white-space: nowrap; /* Prevent wrapping on larger screens */
+    margin-left: -100px; /* Start more from the left on larger screens */
+    font-size: calc(30px + (75 - 30) * ((100vw - 992px) / (1300 - 992))); /* Adjust font size for larger screens */
+  }
+}
+
+/* Media query for even larger screens */
+@media (min-width: 1200px) {
+  .header .header-content .header-title .down {
+    margin-left: -150px; /* Start even more from the left on very large screens */
+  }
+}
+
+@media (min-width: 992px) {
+  .header .header-content .header-title .up {
+    font-size: calc(30px + (60 - 30) * ((100vw - 992px) / (1300 - 992)));
+    margin-left: -100px;
+  }
+
+  .header .header-content .header-title .down {
+    font-size: calc(30px + (75 - 30) * ((100vw - 992px) / (1300 - 992)));
+    white-space: nowrap;
+    margin-left: -100px;
+  }
+
+  .header .header-content .header-subtitle {
+    font-size: calc(10px + (22 - 10) * ((100vw - 992px) / (1300 - 992)));
+    letter-spacing: calc(1px + (7 - 1) * ((100vw - 992px) / (1300 - 992)));
+    margin-top: -10px;
+    white-space: nowrap;
+    margin-left: -100px;
+  }
+}
+
+@media (min-width: 992px) {
+  .header .header-content .header-subtitle {
+    font-size: calc(10px + (18 - 10) * ((100vw - 992px) / (1300 - 992))); /* Adjusted for larger screens */
+    letter-spacing: calc(1px + (5 - 1) * ((100vw - 992px) / (1300 - 992))); /* Adjusted for larger screens */
+    margin-top: -5px; /* Adjust as needed */
+    margin-bottom: 10px; /* Further reduced bottom margin */
+    white-space: nowrap; /* Prevent wrapping on larger screens */
+    margin-left: -100px; /* Adjust as needed */
+  }
+}
+
+/* Media query for even larger screens */
+@media (min-width: 1200px) {
+  .header .header-content .header-subtitle {
+    margin-left: -150px; /* Adjust as needed for very large screens */
+  }
+}
+
+/* Media query for even larger screens */
+@media (min-width: 1200px) {
+  .header .header-content .header-title .up {
+    margin-left: -150px;
+  }
+
+  .header .header-content .header-title .down {
+    margin-left: -150px;
+  }
+
+  .header .header-content .header-subtitle {
+    margin-left: -150px;
+  }
+}
+
+
 
 .about {
   display: -webkit-box;
